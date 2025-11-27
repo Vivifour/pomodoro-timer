@@ -1,43 +1,34 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
+    <title>Pomodoro Timer + To-Do</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-    <h1>Pomodoro Timer</h1>
-    
-    <div class="timer">
-        <span id="display">25:00</span>
+<h2>Pomodoro Timer</h2>
+
+<div id="timeDisplay">25:00</div>
+
+<div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
+
+<button onclick="startPause()">Start / Pause</button>
+<button onclick="resetTimer()">Reset</button>
+
+<div class="todo-section">
+    <h3>To-Do List</h3>
+
+    <div class="todo-input">
+        <input type="text" id="taskInput" placeholder="Tambah tugas...">
+        <button onclick="addTask()">+</button>
     </div>
 
-    <div class="controls">
-        <button onclick="startTimer()">Start</button>
-        <button onclick="pauseTimer()">Pause</button>
-        <button onclick="resetTimer()">Reset</button>
-    </div>
+    <ul id="taskList"></ul>
+</div>
 
-    <div class="settings">
-        <label>Focus (menit): <input type="number" id="focusInput" value="25"></label>
-        <label>Break (menit): <input type="number" id="breakInput" value="5"></label>
-        <button onclick="applySetting()">Apply</button>
-    </div>
-
-    <div class="info">
-        Pomodoro Selesai: <span id="count">0</span>
-    </div>
-
-    <button id="mode" onclick="toggleMode()">🌙 Dark Mode</button>
-
-    <h2>Statistik Harian (7 Hari)</h2>
-    <canvas id="chart" width="400" height="200"></canvas>
-    <button onclick="resetData()">Reset Statistik</button>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
