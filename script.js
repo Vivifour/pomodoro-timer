@@ -78,6 +78,24 @@ function applySetting(){
     breakDuration = document.getElementById("breakInput").value * 60;
     resetTimer();
 }
+// === TO-DO LIST ===
+function addTask() {
+    let input = document.getElementById("taskInput");
+    if(input.value.trim() === "") return;
+
+    let li = document.createElement("li");
+    li.innerHTML = `
+        <span>${input.value}</span>
+        <button onclick="finishTask(this)">✔</button>
+    `;
+    document.getElementById("taskList").appendChild(li);
+    input.value="";
+}
+
+function finishTask(button){
+    let item = button.parentElement;
+    item.classList.toggle("task-done");
+}
 
 // === DARK MODE ===
 function toggleMode(){ 
@@ -128,24 +146,7 @@ function drawChart(){
     });
 }
 
-// === TO-DO LIST ===
-function addTask() {
-    let input = document.getElementById("taskInput");
-    if(input.value.trim() === "") return;
 
-    let li = document.createElement("li");
-    li.innerHTML = `
-        <span>${input.value}</span>
-        <button onclick="finishTask(this)">✔</button>
-    `;
-    document.getElementById("taskList").appendChild(li);
-    input.value="";
-}
-
-function finishTask(button){
-    let item = button.parentElement;
-    item.classList.toggle("task-done");
-}
 
 
 // Inisialisasi Saat Pemuatan Halaman
