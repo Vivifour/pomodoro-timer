@@ -78,6 +78,12 @@ function applySetting(){
     breakDuration = document.getElementById("breakInput").value * 60;
     resetTimer();
 }
+
+
+// === DARK MODE ===
+function toggleMode(){ 
+    document.body.classList.toggle("dark"); 
+}
 // === TO-DO LIST ===
 function addTask() {
     let input = document.getElementById("taskInput");
@@ -95,11 +101,6 @@ function addTask() {
 function finishTask(button){
     let item = button.parentElement;
     item.classList.toggle("task-done");
-}
-
-// === DARK MODE ===
-function toggleMode(){ 
-    document.body.classList.toggle("dark"); 
 }
 
 // === STATISTIK ===
