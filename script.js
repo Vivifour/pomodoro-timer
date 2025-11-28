@@ -8,7 +8,7 @@ let isBreak = false;
 let pomodoroCount = 0;
 
 // Definisi dan Pengaturan Audio
-const sound = new Audio("https://assets.mixkit.co/sfx/download/mixkit-bell-alert-01-2349.wav");
+const sound = new Audio("./sounds/bell.wav");
 sound.volume = 0.6; // Mengatur volume menjadi 60%
 
 function updateDisplay(){
