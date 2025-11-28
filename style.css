@@ -62,28 +62,6 @@ input {
     margin-top: 25px;
     padding: 8px 15px;
 }
-
-/* === DARK MODE STYLES === */
-body.dark {
-    background: #1e1e1e;
-    color: white;
-}
-
-body.dark button {
-    background: #333;
-    color: white;
-}
-
-body.dark .todo-input input {
-    background: #333;
-    color: white;
-}
-
-body.dark #taskList li {
-    background: #333; 
-    color: white;
-}
-
 /* === TO-DO LIST STYLES === */
 .todo-section {
     margin: 30px auto 0;
@@ -143,3 +121,25 @@ body.dark #taskList li {
     text-decoration: line-through;
     opacity: 0.5;
 }
+
+/* === DARK MODE STYLES === */
+body.dark {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark button {
+    background: #333;
+    color: white;
+}
+
+body.dark .todo-input input {
+    background: #333;
+    color: white;
+}
+
+body.dark #taskList li {
+    background: #333; 
+    color: white;
+}
+
