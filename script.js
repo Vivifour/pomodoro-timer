@@ -146,19 +146,41 @@ function drawChart(){
         }
     });
 }
-function playAlarm() {
-    const alarm = document.getElementById("alarmSound");
-    alarm.currentTime = 0;
-    alarm.play();
-}
-if (pomodoroRemaining <= 0) {
-    playAlarm();
-    notifyUser("Waktu Pomodoro selesai!");
-}
-if (breakRemaining <= 0) {
-    playAlarm();
-    notifyUser("Waktu istirahat selesai!");
-}
+const sound = document.getElementById("alarmSound");
+
+function startTimer() {
+    if (running) return;
+    running = true;
+
+        sound.load(sound break.mp3);
+
+    timer = setInterval(() => {
+        duration--;
+        updateDisplay();
+        updateProgress();
+
+        if (duration <= 0) {
+            clearInterval(timer);
+            running = false;
+
+            sound.play(sound break.mp3);  I
+
+            if (!isBreak) {
+                pomodoroCount++;
+                document.getElementById("count").innerText = pomodoroCount;
+                saveStats(1);
+                alert("Fokus selesai! Saatnya istirahat");
+                duration = breakDuration;
+                isBreak = true;
+                startTimer();
+            } else {
+                alert("Istirahat selesai!");
+                duration = focusDuration;
+                isBreak = false;
+                startTimer();
+            }
+        }
+    }, 1000);
 
 
 
