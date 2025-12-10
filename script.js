@@ -8,7 +8,7 @@ let isBreak = false;
 let pomodoroCount = 0;
 
 // Definisi dan Pengaturan Audio
-const sound = new Audio("./sounds/bell.wav");
+const sound = new Audio("sound break.mp3");
 sound.volume = 0.6; // Mengatur volume menjadi 60%
 
 function updateDisplay(){
