@@ -146,6 +146,19 @@ function drawChart(){
         }
     });
 }
+function playAlarm() {
+    const alarm = document.getElementById("alarmSound");
+    alarm.currentTime = 0;
+    alarm.play();
+}
+if (pomodoroRemaining <= 0) {
+    playAlarm();
+    notifyUser("Waktu Pomodoro selesai!");
+}
+if (breakRemaining <= 0) {
+    playAlarm();
+    notifyUser("Waktu istirahat selesai!");
+}
 
 
 
