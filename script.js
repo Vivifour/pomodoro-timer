@@ -40,7 +40,7 @@ function startTimer() {
             clearInterval(timer);
             running = false;
             
-            sound.play(); // Memainkan bunyi saat waktu habis
+            sound.play(sound break.mp3); // Memainkan bunyi saat waktu habis
 
             if (!isBreak) {
                 pomodoroCount++;
